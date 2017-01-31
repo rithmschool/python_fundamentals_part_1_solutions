@@ -67,9 +67,9 @@ def mode(collection):
     # find the highest value (the most frequent number)
     max_value = max(count.values())
     # now we need to see at which index the highest value is at
-    correct_index = count.values().index(max_value)
+    correct_index = list(count.values()).index(max_value)
     # finally, return the correct key for the correct index (we have to convert cou)
-    return count.keys()[correct_index]
+    return list(count.keys())[correct_index]
 
 def capitalize(string):
     return string[:1].upper() + string[1:]
